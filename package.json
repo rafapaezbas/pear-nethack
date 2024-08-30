@@ -1,0 +1,29 @@
+{
+  "name": "pear-nethack",
+  "main": "index.js",
+  "pear": {
+    "name": "pear-nethack",
+    "type": "terminal"
+  },
+  "type": "module",
+  "license": "Apache-2.0",
+  "scripts": {
+    "dev": "pear run -d .",
+    "test": "npx standard",
+    "stage-dry-run": "rm -r node_modules && npm i --omit=dev && pear stage --dry-run prod",
+    "stage": "rm -r node_modules && npm i --omit=dev && pear stage prod",
+    "release": "pear release prod",
+    "seed": "pear seed prod"
+  },
+  "devDependencies": {
+    "standard": "^17.1.0"
+  },
+  "dependencies": {
+    "bare-process": "^2.2.0",
+    "hyperdht": "^6.16.3"
+  },
+  "version": "1.0.0",
+  "keywords": [],
+  "author": "",
+  "description": ""
+}
